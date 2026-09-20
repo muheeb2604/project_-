@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaFlow AI</title>
+    <meta
+      name="description"
+      content="AI SaaS dashboard landing page with analytics, chat workspace, pricing, and settings."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <nav class="nav container">
+          <div class="brand-wrap">
+            <div class="brand-mark">N</div>
+            <span>NovaFlow</span>
+          </div>
+
+          <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#testimonials">Customers</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#dashboard">Dashboard</a>
+          </div>
+
+          <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <span class="sun">☀</span>
+              <span class="moon">☾</span>
+            </button>
+            <button class="btn btn-ghost">Log in</button>
+            <button class="btn btn-primary">Start free</button>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero container">
+          <div class="hero-copy">
+            <div class="eyebrow">AI Operating System for teams</div>
+            <h1>Turn your workflows into autonomous growth engines.</h1>
+            <p>
+              Centralize research, automate actions, and turn conversations into real business outcomes.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-large">Get started</button>
+              <button class="btn btn-secondary btn-large">Watch demo</button>
+            </div>
+
+            <ul class="trust-list">
+              <li>4.9/5 customer satisfaction</li>
+              <li>18k+ teams onboarded</li>
+              <li>2.3x faster execution</li>
+            </ul>
+          </div>
+
+          <div class="hero-card-wrap">
+            <div class="mini-panel">
+              <div class="mini-header">
+                <span class="dot green"></span>
+                <span class="dot yellow"></span>
+                <span class="dot red"></span>
+              </div>
+
+              <div class="signal-card">
+                <div>
+                  <p>Pipeline velocity</p>
+                  <strong>+34.8%</strong>
+                </div>
+                <div class="sparkline" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="ai-panel">
+                <div class="ai-header">
+                  <span class="glow"></span>
+                  <strong>AI Copilot</strong>
+                </div>
+                <div class="ai-bubble user">Draft launch summary and next steps.</div>
+                <div class="ai-bubble assistant">Done — I have identified 5 growth opportunities and generated a prioritized action list.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features container" id="features">
+          <div class="section-heading">
+            <span class="eyebrow center">Why teams choose NovaFlow</span>
+            <h2>Everything your AI stack needs in one command center.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card feature-lg">
+              <div class="icon">✦</div>
+              <h3>Automation Studio</h3>
+              <p>Build AI workflows, approval chains, and task routing without writing code.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">◎</div>
+              <h3>Insight Engine</h3>
+              <p>Summaries, forecasts, and anomaly detection surfaced across your company.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">⌁</div>
+              <h3>Context Memory</h3>
+              <p>Keep every document, call, and decision connected to the right workspace.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">▣</div>
+              <h3>Unified Pipeline</h3>
+              <p>Track product, marketing, and support initiatives from one real-time dashboard.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon">◌</div>
+              <h3>Smart Replies</h3>
+              <p>Draft customer responses, internal briefs, and launch updates in seconds.</p>
+            </article>
+            <article class="feature-card feature-highlight">
+              <div class="icon">✧</div>
+              <h3>Revenue Intelligence</h3>
+              <p>See where your AI adds leverage and which channels are scaling impact.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="testimonials container" id="testimonials">
+          <div class="section-heading">
+            <span class="eyebrow center">Loved by operators</span>
+            <h2>Teams move faster with AI that feels like part of the company.</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="quote-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “NovaFlow helped us automate internal planning and reduce response times from days to minutes.”
+              </p>
+              <div class="person">
+                <div class="avatar avatar-a">A</div>
+                <div>
+                  <strong>Alicia Moore</strong>
+                  <span>VP of Growth, Northstar</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The dashboard makes every team alignment more visible. It feels premium from day one.”
+              </p>
+              <div class="person">
+                <div class="avatar avatar-b">J</div>
+                <div>
+                  <strong>Jon Park</strong>
+                  <span>COO, Signal Labs</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Our AI chat and analytics are now in one system, which means less switching and more action.”
+              </p>
+              <div class="person">
+                <div class="avatar avatar-c">R</div>
+                <div>
+                  <strong>Rina Sethi</strong>
+                  <span>Head of Ops, Asterix</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="pricing container" id="pricing">
+          <div class="section-heading">
+            <span class="eyebrow center">Flexible pricing</span>
+            <h2>Scale from prototypes to enterprise workflows.</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <span class="plan">Starter</span>
+              <h3>$19<span>/mo</span></h3>
+              <ul>
+                <li>Unlimited AI chats</li>
+                <li>3 team members</li>
+                <li>Standard analytics</li>
+                <li>Email support</li>
+              </ul>
+              <button class="btn btn-secondary">Try starter</button>
+            </article>
+            <article class="price-card featured-plan">
+              <span class="badge">Most popular</span>
+              <span class="plan">Growth</span>
+              <h3>$49<span>/mo</span></h3>
+              <ul>
+                <li>Advanced automations</li>
+                <li>Unlimited workspaces</li>
+                <li>Custom reports</li>
+                <li>Priority support</li>
+              </ul>
+              <button class="btn btn-primary">Start free trial</button>
+            </article>
+            <article class="price-card">
+              <span class="plan">Enterprise</span>
+              <h3>Custom</h3>
+              <ul>
+                <li>SSO + governance</li>
+                <li>AI model controls</li>
+                <li>Dedicated onboarding</li>
+                <li>Premium SLA</li>
+              </ul>
+              <button class="btn btn-secondary">Talk to sales</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="dashboard container" id="dashboard">
+          <div class="section-heading left-heading">
+            <span class="eyebrow">Dashboard</span>
+            <h2>Monitoring that feels like a live command center.</h2>
+          </div>
+
+          <div class="dashboard-shell">
+            <aside class="sidebar">
+              <div class="sidebar-brand">
+                <div class="brand-mark small">N</div>
+                <span>NovaFlow</span>
+              </div>
+              <ul>
+                <li class="active">Overview</li>
+                <li>Projects</li>
+                <li>AI Chat</li>
+                <li>Reports</li>
+                <li>Settings</li>
+              </ul>
+              <div class="user-chip">
+                <div class="avatar small-avatar">M</div>
+                <div>
+                  <strong>Maya Chen</strong>
+                  <span>Product lead</span>
+                </div>
+              </div>
+            </aside>
+
+            <div class="dashboard-main">
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <span>Revenue</span>
+                  <strong>$84.2k</strong>
+                  <small>+18.4% vs last month</small>
+                </div>
+                <div class="stat-card">
+                  <span>Tasks automated</span>
+                  <strong>2,490</strong>
+                  <small>+325 this week</small>
+                </div>
+                <div class="stat-card">
+                  <span>Conversion</span>
+                  <strong>7.9%</strong>
+                  <small>+1.3 points uplift</small>
+                </div>
+                <div class="stat-card">
+                  <span>Engagement</span>
+                  <strong>92%</strong>
+                  <small>Retention boost</small>
+                </div>
+              </div>
+
+              <div class="panel-grid">
+                <div class="chart-panel panel">
+                  <div class="panel-header">
+                    <h3>Performance</h3>
+                    <span>Last 6 months</span>
+                  </div>
+                  <div class="bar-chart" aria-label="Bar chart">
+                    <span style="--h: 46%"></span>
+                    <span style="--h: 58%"></span>
+                    <span style="--h: 63%"></span>
+                    <span style="--h: 74%"></span>
+                    <span style="--h: 69%"></span>
+                    <span style="--h: 90%"></span>
+                  </div>
+                </div>
+
+                <div class="panel activity-panel">
+                  <div class="panel-header">
+                    <h3>Recent activity</h3>
+                    <span>Live</span>
+                  </div>
+                  <ul class="activity-list">
+                    <li><span class="pill purple"></span> Campaign brief generated</li>
+                    <li><span class="pill green"></span> AI assistant resolved support issue</li>
+                    <li><span class="pill blue"></span> Weekly metrics sent to leadership</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="panel notifications-panel">
+                <div class="panel-header">
+                  <h3>Notifications</h3>
+                  <span>3 new</span>
+                </div>
+                <div class="notification-item">
+                  <strong>Billing sync complete</strong>
+                  <p>Your revenue forecast updated 12 minutes ago.</p>
+                </div>
+                <div class="notification-item">
+                  <strong>Workflow milestone reached</strong>
+                  <p>Customer onboarding automation hit 98% completion.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="chat container">
+          <div class="section-heading left-heading">
+            <span class="eyebrow">AI Chat</span>
+            <h2>Ask questions, generate briefs, and keep momentum high.</h2>
+          </div>
+
+          <div class="chat-shell">
+            <div class="chat-sidebar">
+              <h3>Conversations</h3>
+              <ul>
+                <li class="active">Launch strategy</li>
+                <li>Customer insights</li>
+                <li>Ops automation</li>
+                <li>Pricing analysis</li>
+              </ul>
+            </div>
+
+            <div class="chat-window">
+              <div class="chat-bubble user-bubble">Summarize our weekly acquisition wins and identify the next actions.</div>
+              <div class="chat-bubble assistant-bubble">Here are the top wins: pricing page conversion improved, retargeting spend became more efficient, and the onboarding funnel is healthy. Recommended next steps: test a stronger CTA, expand paid social segments, and automate report delivery.</div>
+              <div class="chat-input-wrap">
+                <input type="text" placeholder="Ask NovaFlow anything…" />
+                <button class="btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings container">
+          <div class="section-heading left-heading">
+            <span class="eyebrow">Settings</span>
+            <h2>Fine tune your team, workspace, and AI behaviors.</h2>
+          </div>
+
+          <div class="settings-card">
+            <div class="setting-row">
+              <div>
+                <strong>Workspace theme</strong>
+                <span>Sync interface across dashboard and chat</span>
+              </div>
+              <button class="switch active">Dark mode</button>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>AI preferences</strong>
+                <span>Set tone, model behavior, and automation rules</span>
+              </div>
+              <button class="switch">Balanced</button>
+            </div>
+            <div class="setting-row">
+              <div>
+                <strong>Integrations</strong>
+                <span>Connect Slack, Notion, HubSpot, and more</span>
+              </div>
+              <button class="switch active">Enabled</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+      <div class="auth-card">
+        <button class="close-auth" id="closeAuth" aria-label="Close auth">×</button>
+        <div class="auth-header">
+          <span class="eyebrow">Welcome back</span>
+          <h3>Log in to NovaFlow</h3>
+        </div>
+        <form>
+          <label>
+            Email
+            <input type="email" placeholder="name@company.com" />
+          </label>
+          <label>
+            Password
+            <input type="password" placeholder="••••••••" />
+          </label>
+          <button class="btn btn-primary btn-block" type="button">Continue</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
