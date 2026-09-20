@@ -5,40 +5,64 @@ const closeAuth = document.getElementById('closeAuth');
 const loginButtons = document.querySelectorAll('.btn-ghost, .btn-primary');
 
 const applyTheme = (isDark) => {
+  if (!body) return;
   body.classList.toggle('light-theme', !isDark);
-  localStorage.setItem('novaTheme', isDark ? 'dark' : 'light');
+
+  try {
+    localStorage.setItem('novaTheme', isDark ? 'dark' : 'light');
+  } catch (error) {
+    console.warn('Theme preference could not be saved:', error);
+  }
 };
 
-const savedTheme = localStorage.getItem('novaTheme');
-if (savedTheme === 'light') {
-  applyTheme(false);
-} else {
+try {
+  const savedTheme = localStorage.getItem('novaTheme');
+  if (savedTheme === 'light') {
+    applyTheme(false);
+  } else {
+    applyTheme(true);
+  }
+} catch (error) {
+  console.warn('Theme could not be restored from localStorage:', error);
   applyTheme(true);
 }
 
-themeToggle.addEventListener('click', () => {
-  const isDark = !body.classList.contains('light-theme');
-  applyTheme(isDark);
-});
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = !body.classList.contains('light-theme');
+    applyTheme(isDark);
+  });
+}
+
+const openAuthModal = () => {
+  if (!authModal) return;
+  authModal.classList.add('visible');
+  authModal.setAttribute('aria-hidden', 'false');
+};
+
+const closeAuthModal = () => {
+  if (!authModal) return;
+  authModal.classList.remove('visible');
+  authModal.setAttribute('aria-hidden', 'true');
+};
 
 loginButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const isPrimaryCta = button.classList.contains('btn-primary');
     if (isPrimaryCta || button.classList.contains('btn-ghost')) {
-      authModal.classList.add('visible');
-      authModal.setAttribute('aria-hidden', 'false');
+      openAuthModal();
     }
   });
 });
 
-closeAuth.addEventListener('click', () => {
-  authModal.classList.remove('visible');
-  authModal.setAttribute('aria-hidden', 'true');
-});
+if (closeAuth) {
+  closeAuth.addEventListener('click', closeAuthModal);
+}
 
-authModal.addEventListener('click', (event) => {
-  if (event.target === authModal) {
-    authModal.classList.remove('visible');
-    authModal.setAttribute('aria-hidden', 'true');
-  }
-});
+if (authModal) {
+  authModal.addEventListener('click', (event) => {
+    if (event.target === authModal) {
+      closeAuthModal();
+    }
+  });
+}
